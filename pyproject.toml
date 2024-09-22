@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "zero-sum"
+version = "0.1.0"
+description = ""
+authors = ["Rob-TAI <rob@trophi.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.9.2"
+tiktoken = "^0.7.0"
+goose3 = "^3.1.19"
+youtube-transcript-api = "^0.6.2"
+pytube = "^15.0.0"
+zero-gpt = {git = "https://github.com/Zerocrossing/zero-gpt.git"}
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
