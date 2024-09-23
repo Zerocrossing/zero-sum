@@ -1,23 +1,21 @@
-[tool.poetry]
+[project]
 name = "zero-sum"
-version = "0.1.2"
-description = ""
-authors = ["Rob-TAI <rob@trophi.ai>"]
+version = "0.1.0"
+description = "Add your description here"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.11"
-pydantic = "^2.9.2"
-tiktoken = "^0.7.0"
-goose3 = "^3.1.19"
-youtube-transcript-api = "^0.6.2"
-pytube = "^15.0.0"
-zero-gpt = {git = "https://github.com/Zerocrossing/zero-gpt.git"}
-
-
-[tool.poetry.group.dev.dependencies]
-ipykernel = "^6.29.5"
+requires-python = ">=3.11"
+dependencies = [
+    "goose3>=3.1.19",
+    "pydantic>=2.9.2",
+    "pytube>=15.0.0",
+    "tiktoken>=0.7.0",
+    "youtube-transcript-api>=0.6.2",
+    "zero-gpt",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+zero-gpt = { git = "https://github.com/Zerocrossing/zero-gpt.git" }
