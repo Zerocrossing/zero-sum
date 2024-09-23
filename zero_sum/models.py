@@ -64,6 +64,7 @@ class Document(BaseModel):
             kwargs["title"] = path.stem
         doc = cls(text=text, **kwargs)
         doc.source = "file"
+        return doc
 
     @classmethod
     def from_files(cls, paths: list[Path]) -> List["Document"]:
