@@ -62,7 +62,7 @@ class Document(BaseModel):
             text = file.read()
         if "title" not in kwargs:
             kwargs["title"] = path.stem
-        doc = cls(title=path.stem, text=text, **kwargs)
+        doc = cls(text=text, **kwargs)
         doc.source = "file"
 
     @classmethod
