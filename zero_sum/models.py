@@ -58,7 +58,7 @@ class Document(BaseModel):
         """From File
         Create a document from a file.
         """
-        with open(path, "r") as file:
+        with open(path, "r", encoding="utf-8") as file:
             text = file.read()
         if "title" not in kwargs:
             kwargs["title"] = path.stem
